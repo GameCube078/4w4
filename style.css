@@ -9,11 +9,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-olivier
 */
 :root {
-  --couleur-arriere-entete: #aaa;
-  --couleur-arriere-accueil: #0f0;
-  --couleur-arriere-evenement: #045;
-  --couleur-arriere-galerie: rgb(251, 255, 0);
-  --couleur-arriere-footer: #630;
+  --couleur-arriere-entete: rgb(124, 119, 177, 1);
+  --couleur-arriere-accueil: rgba(56, 51, 109, 1);
+  --couleur-arriere-evenement: rgba(86, 136, 108, 1);
+  --couleur-arriere-galerie: rgba(190, 191, 108, 1);
+  --couleur-arriere-footer: rgba(122, 178, 149, 1);
+  --largeur-centre: 1000px;
 }
 
 * {
@@ -24,23 +25,33 @@ Text Domain: theme-olivier
 body {
   display: flex;
   flex-direction: column;
+  font-family: Prompt, sans-serif;
 }
 
 .global {
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  min-height: 40vh;
 }
 
 .global > section,
 .global > header,
 .global > footer {
-  flex: 0 1 1100px;
+  flex: 0 1 var(--largeur-centre);
+  padding: 3rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#entete,
+#footer {
+  min-height: 20vh;
 }
 
 #entete {
   background-color: var(--couleur-arriere-entete);
 }
 
-#accueil {
+#acceuil {
   background-color: var(--couleur-arriere-accueil);
 }
 
@@ -57,5 +68,43 @@ body {
 }
 
 h1 {
-  font-size: clamp(1rem, -1.292rem + 7.33vw, 75rem);
+  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  font-weight: 600;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: clamp(1rem, -1.292rem + 73335vw, 3.75rem);
+  font-weight: 500;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+h3 {
+  font-size: clamp(0.7rem, 0.486rem + 0.571vw, 1rem);
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h4 {
+  font-size: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
+  font-weight: 300;
+  font-style: light;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h5 {
+  font-size: clamp(0.5rem, 0.214rem + 0.762vw, 0.9rem);
+  font-weight: 200;
+  font-style: light;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+h6 {
+  font-size: clamp(0.3rem, 0.086rem + 0.571vw, 0.6rem);
+  font-weight: 100;
+  font-style: light;
+  color: rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=style.css.map */
