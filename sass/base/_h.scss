@@ -1,36 +1,44 @@
 h1 {
-    font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+    font-size: clamp(3rem, 1.75rem + 3.333vw, 4.75rem);
     font-weight: 600;
     font-style: normal;
     color: rgba(0, 0, 0, 0.3);
+    letter-spacing: 1rem;
+    text-transform: uppercase;
 }
 h2 {
     font-size: clamp(1rem, -1.292rem + 73335vw, 3.75rem);
     font-weight: 500;
     font-style: normal;
     color: rgba(0, 0, 0, 0.3);
+    padding-bottom: 2rem;
 }
 h3 {
     font-size: clamp(0.7rem, 0.486rem + 0.571vw, 1rem);
     font-weight: 400;
     font-style: normal;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
 }
 h4 {
     font-size: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
     font-weight: 300;
     font-style: light;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
 }
 h5 {
     font-size: clamp(0.5rem, 0.214rem + 0.762vw, 0.9rem);
     font-weight: 200;
     font-style: light;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
 }
 h6 {
     font-size: clamp(0.3rem, 0.086rem + 0.571vw, 0.6rem);
     font-weight: 100;
     font-style: light;
-    color: rgba(0, 0, 0, 0.2);
+    color: rgba(0, 0, 0, 0.3);
+}
+p {
+    font-size: clamp(1rem, 0.464rem + 1.429vw, 1.75rem);
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.3);
 }

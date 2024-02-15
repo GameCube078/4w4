@@ -1,0 +1,14 @@
+.diagonal {
+    position: relative;
+    isolation: isolate;
+    z-index: 2;
+}
+.diagonal::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: var(--couleur-arriere-entete);
+    z-index: -1;
+    transform: skewY(-5deg);
+    filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+}

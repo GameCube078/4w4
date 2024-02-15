@@ -9,12 +9,35 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-olivier
 */
 :root {
-  --couleur-arriere-entete: rgb(124, 119, 177, 1);
+  /*--couleur-arriere-entete: rgb(124, 119, 177, 1);
   --couleur-arriere-accueil: rgba(56, 51, 109, 1);
   --couleur-arriere-evenement: rgba(86, 136, 108, 1);
   --couleur-arriere-galerie: rgba(190, 191, 108, 1);
   --couleur-arriere-footer: rgba(122, 178, 149, 1);
+  --largeur-centre: 1000px;*/
+  --u1: 160;
+  --u2: calc(var(--u1) + 180);
+  --u3: calc(var(--u2) - 30);
+  --u4: calc(var(--u2) + 30);
+  --s-arriere: 100%;
+  --s-block-code: 10%;
+  --s-avant: 30%;
+  --l-arriere: 30%;
+  --l-block-code: 20%;
+  --l-avant: 20%;
+  --couleur-arriere-entete: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-accueil: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-evenement: hsl(var(--u3), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-galerie: hsl(var(--u2), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-footer: hsl(var(--u1), var(--s-arriere), var(--l-arriere));
+  --couleur-arriere-block-code: hsl(var(--u1), var(--s-block-code), var(--l-block-code));
+  --couleur-entete: hsl(var(--u1), var(--s-avant), var(--l-avant));
+  --couleur-accueil: hsl(var(--u2), var(--s-avant), var(--l-avant));
+  --couleur-evenement: hsl(var(--u3), var(--s-avant), var(--l-avant));
+  --couleur-galerie: hsl(var(--u4), var(--s-avant), var(--l-avant));
+  --couleur-footer: hsl(var(--u1), var(--s-avant), var(--l-avant));
   --largeur-centre: 1000px;
+  --transparence: 0;
 }
 
 * {
@@ -39,7 +62,7 @@ body {
 .global > footer {
   flex: 0 1 var(--largeur-centre);
   padding: 3rem 1rem;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, var(--transparence));
 }
 
 #entete,
@@ -49,29 +72,50 @@ body {
 
 #entete {
   background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
+  position: relative;
 }
 
 #acceuil {
   background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-acceuil);
+  position: relative;
 }
 
 #evenement {
-  background-color: var(--couleur-arriere-evenement);
+  background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-evenement);
+  position: relative;
 }
 
 #galerie {
   background-color: var(--couleur-arriere-galerie);
+  color: var(--couleur-galerie);
+  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
+  z-index: 1;
+}
+
+header,
+section,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
-  font-size: clamp(1.25rem, -2.656rem + 12.5vw, 4.375rem);
+  font-size: clamp(3rem, 1.75rem + 3.333vw, 4.75rem);
   font-weight: 600;
   font-style: normal;
   color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 1rem;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -79,32 +123,122 @@ h2 {
   font-weight: 500;
   font-style: normal;
   color: rgba(0, 0, 0, 0.3);
+  padding-bottom: 2rem;
 }
 
 h3 {
   font-size: clamp(0.7rem, 0.486rem + 0.571vw, 1rem);
   font-weight: 400;
   font-style: normal;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 h4 {
   font-size: clamp(0.5rem, 0.143rem + 0.952vw, 1rem);
   font-weight: 300;
   font-style: light;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 h5 {
   font-size: clamp(0.5rem, 0.214rem + 0.762vw, 0.9rem);
   font-weight: 200;
   font-style: light;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 h6 {
   font-size: clamp(0.3rem, 0.086rem + 0.571vw, 0.6rem);
   font-weight: 100;
   font-style: light;
-  color: rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: clamp(1rem, 0.464rem + 1.429vw, 1.75rem);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 110px;
+}
+
+.vague .shape-fill {
+  fill: var(--couleur-arriere-accueil);
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+  z-index: 2;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--couleur-arriere-entete);
+  z-index: -1;
+  transform: skewY(-5deg);
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+}
+
+blockquote {
+  background-color: var(--couleur-arriere-entete);
+  padding: 3rem;
+  border-radius: 2rem;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+  font-size: clamp(1rem, 0.464rem + 1.429vw, 1.75rem);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.block-code {
+  background-color: var(--couleur-arriere-block-code);
+  padding: 3rem;
+  border-radius: 2rem;
+  color: rgba(225, 225, 225, 0.5);
+  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.divButton {
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  margin: 1rem;
+  width: 20rem;
+  height: 5rem;
+  background-color: var(--couleur-arriere-entete);
+  font-size: clamp(1rem, 0.464rem + 1.429vw, 1.75rem);
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 2rem;
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
+  transition: filter 0.2s ease;
+}
+
+button:hover {
+  filter: drop-shadow(0 0 2rem rgba(255, 255, 255, 0.5));
+}
+
+button:active {
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.5));
 }/*# sourceMappingURL=style.css.map */
