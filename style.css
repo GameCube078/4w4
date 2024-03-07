@@ -40,6 +40,14 @@ Text Domain: theme-olivier
   --transparence: 0;
 }
 
+#entete {
+  --_couleur-arriere-vague: var(--couleur-arriere-galerie);
+}
+
+#galerie {
+  --_couleur-arriere-vague: var(--couleur-arriere-entete);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +75,14 @@ body {
 
 #entete,
 #footer {
+  min-height: 20vh;
+}
+
+.global > .hero {
+  flex: 1;
+}
+
+#menu {
   min-height: 20vh;
 }
 
@@ -254,7 +270,7 @@ a:visited {
   color: red;
 }
 
-.entete__header {
+.hero {
   background-image: url(img/bowlerhat.png);
   background-repeat: no-repeat;
   background-position: 100%;
@@ -276,4 +292,49 @@ a:visited {
   border: rgba(0, 0, 0, 0.3) 4px solid;
   border-radius: 1vw;
   padding: 1vw;
+}
+
+.global {
+  background-color: var(--couleur-arriere-entete);
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  list-style-type: none;
+  flex-direction: column;
+  transform: translateX(300%);
+}
+@media (min-width: 700px) {
+  .menu {
+    position: static;
+    flex-direction: row;
+    display: flex;
+    transform: translateX(0);
+  }
+}
+
+.menu-item {
+  flex: 1 0 50px;
+}
+
+.menu-item a {
+  color: #fff;
+}
+
+/* gestion label #burger l'image svg est dans un label */
+#burger {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+@media (min-width: 700px) {
+  #burger {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */

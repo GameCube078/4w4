@@ -24,6 +24,12 @@ body {
 #footer {
     min-height: 20vh;
 }
+.global > .hero {
+    flex: 1;
+}
+#menu {
+    min-height: 20vh;
+}
 #entete {
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);

@@ -27,3 +27,24 @@
 ### integrer les vagues
 
 ### integrer une diagonal
+
+# Labo 4
+
+### cree branche labo 4
+
+ajouter menu permettant d'acceder
+
+-   5 cours preferer
+    -sections de la page
+
+-formater en utilisant
+composant/\_menu.scss
+adaptatif
+
+### creation d'un header.php
+
+-cree template header.php
+
+### creation d'un template part
+
+qui affiche des vagues

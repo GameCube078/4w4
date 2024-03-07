@@ -40,3 +40,9 @@
     --largeur-centre: 1000px;
     --transparence: 0;
 }
+#entete {
+    --_couleur-arriere-vague: var(--couleur-arriere-galerie);
+}
+#galerie {
+    --_couleur-arriere-vague: var(--couleur-arriere-entete);
+}
