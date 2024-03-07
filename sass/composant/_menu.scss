@@ -5,14 +5,21 @@
     //nav
     // background-color: black;
 }
-
 .menu {
     //ul
+    z-index: 1;
     position: absolute;
     display: flex;
     list-style-type: none;
     flex-direction: column;
     transform: translateX(300%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    width: 80vw;
+    backdrop-filter: blur(50px);
+    box-shadow: 1px 1px 5px 2px rgba(1, 1, 1, 0.2);
+    transition: transform 0.5s ease-in-out;
     @media (min-width: 700px) {
         position: static;
         flex-direction: row;
@@ -29,6 +36,7 @@
 .menu-item a {
     // li a
     color: #fff;
+    text-decoration: none;
 }
 
 /* gestion label #burger l'image svg est dans un label */
@@ -42,6 +50,10 @@
     }
 }
 
-#chk_burger:checked ~ .menu {
+#chk_burger:checked ~ .menu__header .menu {
     transform: translateX(0);
+}
+
+#chk_burger {
+    display: none;
 }
