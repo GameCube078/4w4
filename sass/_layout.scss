@@ -51,10 +51,12 @@ body {
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
     position: relative;
+    width: 100vw;
 }
 #footer {
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-footer);
+    width: 100vw;
     z-index: 1;
 }
 header,
