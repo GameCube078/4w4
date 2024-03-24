@@ -1,36 +1,9 @@
 <?php get_header();?>
 
-        <div id="entete" class="global clr-agencement-primaire">
-            <header class="hero">
-                <h1><?php echo get_bloginfo("name") ?></h1>
-                <h2><?php echo get_bloginfo("description") ?></h2>
-                <h3>Ceci est le plus magnifique site de voyage!</h3>
-            </header>
-            <?php get_template_part("gabarit/vague") ?>
-        </div>
+        
         <div id="acceuil" class="global">
             <section>
                 <h2>Acceuil</h2>
-                <div class="cours">
-                <?php
-                $args = array(
-                    'orderby' => 'name',
-                    'order' => 'ASC',
-                    'hide_empty' => false,
-                );
-
-                $categories = get_categories($args);
-
-                foreach ($categories as $category) {
-                    echo '<div class="carte">';
-                    echo '<h2>' . $category->name . '</h2>';
-                    echo '<p>' . wp_trim_words($category->description, 10) . '...</p>'; // Les 10 premiers mots de la description
-                    echo '<a href="' . get_category_link($category->term_id) . '">Voir plus</a>'; // Lien vers la liste de destination associée
-                    echo '<p>Nombre d\'articles : ' . $category->count . '</p>'; // Nombre d'articles dans la catégorie
-                    echo '</div>';
-                }
-                ?>
-                </div>
                 <div class="cours">
                 
                 <?php
@@ -58,16 +31,6 @@
                         
                 
             </section>
-        </div>
-        <div id="evenement" class="global diagonal">
-            <section>
-                <h2>Évènement</h2>
-                <p class="block-code">
-                    Il n'y a pas d'évènement pour le moment parce que c'est un site de voyage et des évènements sur un site de voyage c'est pas très logique.
-                </p>
-            </section>
-            
-            </div>
         </div>
         <div id="galerie" class="global">
             <section>

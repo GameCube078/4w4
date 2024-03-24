@@ -1,52 +1,28 @@
 Auteur : Olivier Dorion
+Adresse :
+Descrption : Site de voyage cree dans le cadre du cours de web
 
-# Labo 1
+# TP1 - Club de voyage
 
-## Introduction a Sass et revision de HTML/CSS
+# Exercice 2 (5 points)
 
--   Un dossier Sass qui contient un dossier:
-    -   un sous dossier base
-        -   \_h.scss
-        -   \_liens.scss
-    -   style.scss
-        -creation d'une pagination avec flex box
-        -utilisation de police google fonts
+-   Compléter l'utilisation du mapping de couleurs avec boucle et mixin (1 point)
 
-# Labo 2
+-   Amélioration de la page d'accueil (front-page.php) (1 point)
+    -   Changer le titre et la description générale du site
+    -   Chaque destination contient les catégories associées.
+    -   On voit uniquement les destinations « populaire »
+    -   Améliorer l'apparence de la liste des catégories
+    -   Améliorer l'apparence de chacune des cartes
+-   Afficher des cartes de catégories pour l'ensemble des catégories dans la page d'accueil (2 points)
 
-## utilisation de la fonction hsl()
+    -   Titre de la catégorie
+    -   10 premiers mot de la description
+    -   Un lien permet d'accéder à la liste des destinations de cette catégorie
+    -   Le nombre d'article pour cette catégorie
 
-## integration des effet vagues et diagonale
-
-### reference utiles
-
--   reference hsl()
-
-## ce que vous devez faire:
-
-### utiliser la fonction hsl
-
-### integrer les vagues
-
-### integrer une diagonal
-
-# Labo 4
-
-### cree branche labo 4
-
-ajouter menu permettant d'acceder
-
--   5 cours preferer
-    -sections de la page
-
--formater en utilisant
-composant/\_menu.scss
-adaptatif
-
-### creation d'un header.php
-
--cree template header.php
-
-### creation d'un template part
-
-qui affiche des vagues
+-   Créer un readme (1 point)
+    -   Créer une github-page : mettre à jour index.htm
+    -   Ajouter l'adresse de la github-page dans votre readme.
+    -   Le nom de l'auteur
+    -   Courte description de votre tp1

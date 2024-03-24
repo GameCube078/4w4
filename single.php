@@ -1,16 +1,6 @@
 <?php get_header();?>
 
-        <div id="entete" class="global">
-            <header class="hero">
-                <h1>Thème WP</h1>
-                <h2>4W4 - Conception d'interface et développement Web</h2>
-                <h3>TIM-Collège Maisonneuve</h3>
-                <a href="https://en.wikipedia.org/wiki/Watermelon">
-                    <button> Ceci est un lien </button>
-                </a>
-            </header>
-            <?php get_template_part("gabarit/vague") ?>
-        </div>
+        
         <div id="acceuil" class="global">
             <section>
                 <h2>Acceuil</h2>
