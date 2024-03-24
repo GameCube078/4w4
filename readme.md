@@ -1,3 +1,5 @@
+Auteur : Olivier Dorion
+
 # Labo 1
 
 ## Introduction a Sass et revision de HTML/CSS

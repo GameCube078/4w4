@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;600&display=swap" rel="stylesheet" />
     </head>
     <body>
-        <div id="menu" class="global">
+        <div id="menu" class="global clr-agencement-primaire">
         <?= get_custom_logo(); ?>
         <input type="checkbox" name="" id="chk_burger">
         <label id="burger" for="chk_burger">
